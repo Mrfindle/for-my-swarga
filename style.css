@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 200vh;
+  background: linear-gradient(180deg, #ff758c, #ff7eb3);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Falling hearts */
+#hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.heart {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.8);
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  from { transform: translateY(-10vh); }
+  to { transform: translateY(110vh); }
+}
+
+/* Layout */
+.container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 70px 20px;
+  max-width: 700px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+}
+
+/* Buttons */
+.buttons {
+  position: relative;
+  height: 160px;
+}
+
+button {
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  position: absolute;
+}
+
+#yes {
+  background: white;
+  color: #ff3f6c;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#no {
+  background: #ff3f6c;
+  color: white;
+  left: 50%;
+  top: 70px;
+  transform: translateX(-50%);
+}
+
+/* Message */
+.message {
+  display: none;
+  margin-top: 40px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.scroll-hint {
+  margin-top: 30px;
+  opacity: 0.7;
+}
+
+/* Kiss section */
+.kiss-section {
+  display: none;
+  margin-top: 120px;
+}
+
+.kiss {
+  font-size: 4rem;
+}
+
+.kiss-text {
+  margin-top: 15px;
+  font-size: 1.3rem;
+}
